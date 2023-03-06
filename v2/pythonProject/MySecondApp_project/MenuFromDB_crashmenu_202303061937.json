@@ -1,0 +1,39 @@
+{
+"MenuFromDB_crashmenu": [
+	{
+		"id" : 1,
+		"name" : "Чай",
+		"url" : "\/tea",
+		"parent_id" : 1
+	},
+	{
+		"id" : 2,
+		"name" : "Черный",
+		"url" : "\/tea\/black",
+		"parent_id" : 1
+	},
+	{
+		"id" : 3,
+		"name" : "Желтый",
+		"url" : "\/tea\/yellow",
+		"parent_id" : 1
+	},
+	{
+		"id" : 4,
+		"name" : "Кофе",
+		"url" : "\/coffee",
+		"parent_id" : 4
+	},
+	{
+		"id" : 5,
+		"name" : "Арабика",
+		"url" : "\/coffee\/arab",
+		"parent_id" : 4
+	},
+	{
+		"id" : 6,
+		"name" : "Рабуста",
+		"url" : "\/coffee\/rabusta",
+		"parent_id" : 4
+	}
+]}

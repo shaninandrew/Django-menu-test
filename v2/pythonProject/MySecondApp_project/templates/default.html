@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Шанин Андрей Владимирович  hedgestandart@gmail.com -->
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> {{title}}</title>
+</head>
+<style>
+    .casual { background: white }
+    .selected { background: green }
+    body { background: white}
+
+    .casual::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Раскрытая стрелка */
+.casual::before {
+ content: "\25B6"; /* можно заменить на другой символ */
+  transform: rotate(90deg);
+}
+
+
+</style>
+
+<body class="body">
+Вроде работает
+{{item}}
+{{title}}
+<script>
+{% autoescape off %}
+var menu = {{menu}};
+var menu_len = {{menu_len}};
+var item= "{{item}}";
+{% endautoescape %}
+
+for (i=0; i<menu_len; i++)
+{
+class_item="casual"
+if (item==menu[i][1]) { class_item ="selected" }
+ document.write ( "<"+menu[i][3]+"  class=\""+class_item+"\">"  , ' <a  class=\""+class_item+"\" href="',menu[i][1],'">' ,menu[i][0] ,'</a> :: ', menu[i][1] , ":: </"+menu[i][3]+">" )
+}
+
+</script>
+
+
+</body>
+</html>
